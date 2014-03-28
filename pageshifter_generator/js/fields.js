@@ -203,4 +203,14 @@ $(document).ready(function(){
 		}
 	});
 
+	$('#exportTag').click(function(){
+		if (!$('#tagBox').val()){
+			$('#notice').slideDown(function(){
+				$('#notice').html('No point in exporting nothing!');
+			});
+		} else {
+			$(this).parent().submit();
+		}
+	});
+
 });

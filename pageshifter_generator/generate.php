@@ -1,16 +1,19 @@
 <?php
 
-    echo $tag = htmlspecialchars_decode($_POST['tagBoxValue']);
-    echo $demosite = stripslashes($_POST['demosite']);
-    echo $page_title = "PageShifter Demo";
+    $tag = htmlspecialchars_decode($_POST['tagBoxValue']);
+    $demosite = stripslashes($_POST['demosite']);
+    $page_title = "PageShifter Demo";
 
-    $random = rand(100000, 9999999);
-    $filepath= 'demos/addemo_'.$random.'.html';
+    //Random AlphaNumeric String
+    $length = rand(4,6);
+    $random = substr(md5(rand(0, 1000000)), 0, $length);
+
+    $filepath= 'demo/ad_'.$random.'.html';
     
     if (!empty($_POST['client'])) {
         $client = $_POST['client'];
         $page_title .= ' for '.$client;
-        $filepath = str_replace('demos/','demos/'.urlencode($client).'_',$filepath);
+        $filepath = str_replace('demo/','demo/'.urlencode($client).'_',$filepath);
     }
 
     switch ($demosite) {
@@ -43,7 +46,7 @@
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 <link href=\"favicon.ico\" rel=\"shortcut icon\" />
 <link href=\"http://fonts.googleapis.com/css?family=Roboto:700,500,300italic\" rel=\"stylesheet\" type=\"text/css\">
-<link rel=\"stylesheet\" href=\"../demos/css/style.css\">
+<link rel=\"stylesheet\" href=\"../demo/css/style.css\">
 <style>body{background:{$sitebgcolor};}</style>
 </head>
 <body>

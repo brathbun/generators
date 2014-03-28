@@ -22,7 +22,7 @@
 			<h2>Burst Media PageShifter Tag Generator</h2>
 			<div id="notice"></div>
 
-			<form action="generate.php" method="POST">
+			<form action="" id="submit" method="POST">
 				<div class="radio input">
 					<input type="radio" id="flashtype" name="typeproperty" value="flash" checked=true>
 					<label for="flashtype">Flash</label>
@@ -217,14 +217,13 @@
 					<p><textarea class="highlight" name="tagBoxValue" id="tagBox" rows="7" cols="70" placeholder="Your tag will spawn here..." ></textarea></p>
 				</div>
 			
-				<hr>
-
-				<h3>Select your site below and generate a test page using the tag above.</h3>
-
-				<div class="clientName">
-					<p><input class="highlight" type="text" name="client" placeholder="Client Name"/>
+				<div class="input clientName">
+					<input id="exportTag" onclick="submitForm('export.php')" type="button" value="Export Tag :P" >
+					<input class="highlight" type="text" name="client" placeholder="Client Name"/>
 					<span class="italic">* Optional</span><br />
 				</div>				
+
+				<h3>Select your site below and generate a test page using the tag above.</h3>
 
 				<p>
 				<input type="radio" id="momiq" name="demosite" value="momiqsite" checked=true>
@@ -250,7 +249,7 @@
 					<img src="img/ladbible_thumb.jpg" />
 				</div>
 
-				<p><input id="generate" type="button" value="Generate on MomIQ.tv"></p>
+				<p><input onclick="submitForm('generate.php')" id="generate" type="button" value="Generate on MomIQ.tv"></p>
 
 			</form>
 		</div>
@@ -259,6 +258,17 @@
 	<div id="uploadWindow"></div>
 
 </div>
+
+<script>
+    function submitForm(action)
+    {
+        document.getElementById('submit').action = action;
+		if ($('#tagBox').val()){
+			document.getElementById('submit').submit();
+		}
+    }
+</script>
+
 </body>
 
 </html>
