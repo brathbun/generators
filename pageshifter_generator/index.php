@@ -23,16 +23,23 @@
 			<div id="notice"></div>
 
 			<form action="" id="submit" method="POST">
+
+				<div class="radio input">
+					<input type="radio" id="tophatunit" name="unit" value="tophat" checked=true>
+					<label for="tophatunit">Tophat</label>
+					<input type="radio" id="pushdownunit" name="unit" value="pushdown">
+					<label for="pushdownunit">Pushdown</label>
+					<input type="radio" id="billboardtype" name="unit" value="billboard">
+					<label for="billboardtype">Billboard</label>				
+					<div class="label"><div class="labelText">Select Unit</div></div>
+				</div>
+
 				<div class="radio input">
 					<input type="radio" id="flashtype" name="typeproperty" value="flash" checked=true>
 					<label for="flashtype">Flash</label>
-					<input type="radio" id="htmltype" name="typeproperty" value="html" disabled="disabled">
-					<label for="othertype">HTML5</label>
-					<input type="radio" id="imagetype" name="typeproperty" value="image" disabled="disabled">
-					<label for="imagetype">Image</label>
-					<input type="radio" id="iframetype" name="typeproperty" value="iframe" disabled="disabled">
-					<label for="iframetype">iFrame</label>				
-					<div class="label"><div class="labelText">Pick your Creative Type. <span class='italic'>*Flash Only ATM</span></div></div>
+					<input type="radio" id="imagetype" name="typeproperty" value="image">
+					<label for="imagetype">Image</label>				
+					<div class="label"><div class="labelText">Select Creative Type</div></div>
 				</div>
 
 				<div class="input" id="widthInput">

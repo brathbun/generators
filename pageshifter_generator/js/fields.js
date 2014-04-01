@@ -91,6 +91,7 @@ $(document).ready(function(){
 	//Generate Tag 
 	$('#generateTag').click(function(){
 
+		var unit = $('input:radio[name="unit"]:checked').val();
 		var typeproperty = $('input:radio[name="typeproperty"]:checked').val();
 		var width = $('#width').val();
 		var colheight = $('#colheight').val();
@@ -138,6 +139,7 @@ $(document).ready(function(){
 '// Copyright 2014 \n' +
 '\n' +
 'var BMTH_setup = { \n' +
+'	\'unit\': \''+unit+'\', \n' +
 '	\'type\': \''+typeproperty+'\', \n' +
 '	\'width\': \''+width+'\', \n' +
 '	\'height\': \''+colheight+'\', \n' +
@@ -174,7 +176,7 @@ $(document).ready(function(){
 '\n' +
 'document.write(\'<img src="\' + BMTH_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +
 'document.write(\'<scr'+'ipt type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></scr\'+\'ipt>\'); \n' +
-'document.write(\'<scr'+'ipt type="text/javascript" src="http://static-cdn.labs.burstnet.com/uploads/pt1p8_burst.labs.tophat.js"></scr\'+\'ipt>\'); \n' +
+'document.write(\'<scr'+'ipt type="text/javascript" src="http://static-cdn.labs.burstnet.com/uploads/rccuj_burst.labs.tophat.js"></scr\'+\'ipt>\'); \n' +
 '</script>';
 
 		$('#tagBox').focus().val(tag).select();
