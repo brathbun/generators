@@ -61,6 +61,10 @@ $(document).ready(function(){
 		$('#ellagraphic').css('display', 'none');
 		$('#grgraphic').css('display', 'none');
 		$('#biblegraphic').css('display', 'none');
+		$('#femalefirstgraphic').css('display', 'none');
+		$('#greatchefsgraphic').css('display', 'none');
+		$('#djmaggraphic').css('display', 'none');
+		$('#westlondongraphic').css('display', 'none');		
 		$('#generate').attr('value', 'Generate on MomIQ.tv');
 	});
 	$('#elladaily').click(function() {
@@ -68,6 +72,10 @@ $(document).ready(function(){
 		$('#ellagraphic').css('display', 'block');
 		$('#grgraphic').css('display', 'none');
 		$('#biblegraphic').css('display', 'none');
+		$('#femalefirstgraphic').css('display', 'none');
+		$('#greatchefsgraphic').css('display', 'none');
+		$('#djmaggraphic').css('display', 'none');
+		$('#westlondongraphic').css('display', 'none');			
 		$('#generate').attr('value', 'Generate on EllaDaily.com');
 	});
 	$('#giantrealm').click(function() {
@@ -75,6 +83,10 @@ $(document).ready(function(){
 		$('#ellagraphic').css('display', 'none');
 		$('#grgraphic').css('display', 'block');
 		$('#biblegraphic').css('display', 'none');
+		$('#femalefirstgraphic').css('display', 'none');
+		$('#greatchefsgraphic').css('display', 'none');
+		$('#djmaggraphic').css('display', 'none');
+		$('#westlondongraphic').css('display', 'none');			
 		$('#generate').attr('value', 'Generate on GiantRealm.com');
 	});	
 	$('#theladbible').click(function() {
@@ -82,8 +94,56 @@ $(document).ready(function(){
 		$('#ellagraphic').css('display', 'none');
 		$('#grgraphic').css('display', 'none');
 		$('#biblegraphic').css('display', 'block');
+		$('#femalefirstgraphic').css('display', 'none');
+		$('#greatchefsgraphic').css('display', 'none');
+		$('#djmaggraphic').css('display', 'none');
+		$('#westlondongraphic').css('display', 'none');			
 		$('#generate').attr('value', 'Generate on TheLadBible.com');
 	});
+	$('#femalefirst').click(function() {
+		$('#momiqgraphic').css('display', 'none');
+		$('#ellagraphic').css('display', 'none');
+		$('#grgraphic').css('display', 'none');
+		$('#biblegraphic').css('display', 'none');
+		$('#femalefirstgraphic').css('display', 'block');
+		$('#greatchefsgraphic').css('display', 'none');
+		$('#djmaggraphic').css('display', 'none');
+		$('#westlondongraphic').css('display', 'none');			
+		$('#generate').attr('value', 'Generate on Femalefirst.co.uk');
+	});
+	$('#greatbritishchefs').click(function() {
+		$('#momiqgraphic').css('display', 'none');
+		$('#ellagraphic').css('display', 'none');
+		$('#grgraphic').css('display', 'none');
+		$('#biblegraphic').css('display', 'none');
+		$('#femalefirstgraphic').css('display', 'none');
+		$('#greatchefsgraphic').css('display', 'block');
+		$('#djmaggraphic').css('display', 'none');
+		$('#westlondongraphic').css('display', 'none');			
+		$('#generate').attr('value', 'Generate on Greatbritishchefs.co.uk');
+	});
+	$('#djmag').click(function() {
+		$('#momiqgraphic').css('display', 'none');
+		$('#ellagraphic').css('display', 'none');
+		$('#grgraphic').css('display', 'none');
+		$('#biblegraphic').css('display', 'none');
+		$('#femalefirstgraphic').css('display', 'none');
+		$('#greatchefsgraphic').css('display', 'none');
+		$('#djmaggraphic').css('display', 'block');
+		$('#westlondongraphic').css('display', 'none');			
+		$('#generate').attr('value', 'Generate on DJMag.co.uk ');
+	});	
+	$('#westlondonmum').click(function() {
+		$('#momiqgraphic').css('display', 'none');
+		$('#ellagraphic').css('display', 'none');
+		$('#grgraphic').css('display', 'none');
+		$('#biblegraphic').css('display', 'none');
+		$('#femalefirstgraphic').css('display', 'none');
+		$('#greatchefsgraphic').css('display', 'none');
+		$('#djmaggraphic').css('display', 'none');
+		$('#westlondongraphic').css('display', 'block');			
+		$('#generate').attr('value', 'Generate on Westlondonmum.com');
+	});	
 
 	//Lightbox Jquery
 	$('.uploadIframe').colorbox({href:'http://upload.app2.labs.burstnet.com', iframe:true, width:'780px', height:'300px'});

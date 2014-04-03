@@ -37,7 +37,9 @@ body {
 
 #uploadWindow {display:none;}
 
-#ellagraphic, #grgraphic, #biblegraphic, #expandTimeInput, #collapseTimeInput {display:none;}
+#ellagraphic, #grgraphic, #biblegraphic,
+#femalefirstgraphic, #greatchefsgraphic, #djmaggraphic,#westlondongraphic,
+#expandTimeInput, #collapseTimeInput {display:none;}
 
 .label { 
     background: url(../img/arrow.png) no-repeat left center;

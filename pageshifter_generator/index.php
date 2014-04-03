@@ -234,13 +234,23 @@
 
 				<p>
 				<input type="radio" id="momiq" name="demosite" value="momiqsite" checked=true>
-				<label for="momiq">MomIQ.tv</label>
+				<label for="momiq">MomIQ</label>
 				<input type="radio" id="elladaily" name="demosite" value="ellasite">
-				<label for="elladaily">EllaDaily.com</label>
+				<label for="elladaily">EllaDaily</label>
 				<input type="radio" id="giantrealm" name="demosite" value="giantsite">
-				<label for="giantrealm">GiantRealm.com</label>
+				<label for="giantrealm">GiantRealm</label>
 				<input type="radio" id="theladbible" name="demosite" value="biblesite">
-				<label for="theladbible">TheLadBible.com</label>
+				<label for="theladbible">TheLadBible</label>
+
+				<input type="radio" id="femalefirst" name="demosite" value="femalefirstsite">
+				<label for="femalefirst">FemaleFirst</label>
+				<input type="radio" id="greatbritishchefs" name="demosite" value="greatchefsite">
+				<label for="greatbritishchefs">GreatBritishChefs</label>
+				<input type="radio" id="djmag" name="demosite" value="djmagsite">
+				<label for="djmag">DJMag</label>
+				<input type="radio" id="westlondonmum" name="demosite" value="westlondonsite">
+				<label for="westlondonmum">WestLondonmum</label>
+
 				</p>
 
 				<div class="" id="momiqgraphic">
@@ -255,6 +265,18 @@
 				<div class="" id="biblegraphic">
 					<img src="img/ladbible_thumb.jpg" />
 				</div>
+				<div class="" id="femalefirstgraphic">
+					<img src="img/femalefirst_thumb.jpg" />
+				</div>
+				<div class="" id="greatchefsgraphic">
+					<img src="img/greatchefs_thumb.jpg" />
+				</div>
+				<div class="" id="djmaggraphic">
+					<img src="img/djmag_thumb.jpg" />
+				</div>
+				<div class="" id="westlondongraphic">
+					<img src="img/westlondon_thumb.jpg" />
+				</div>				
 
 				<p><input onclick="submitForm('generate.php')" id="generate" type="button" value="Generate on MomIQ.tv"></p>
 

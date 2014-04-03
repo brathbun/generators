@@ -32,7 +32,23 @@
         case 'biblesite':
             $sitebg = 'ladbible_testpage_backdrop.jpg';
             $sitebgcolor = '#e3e7e6';
-            break;            
+            break;
+        case 'femalefirstsite':
+            $sitebg = 'femalefirst_testpage_backdrop.jpg';
+            $sitebgcolor = '#efefef';
+            break;  
+        case 'greatchefsite':
+            $sitebg = 'greatchefs_testpage_backdrop.jpg';
+            $sitebgcolor = '#fff';
+            break;  
+        case 'djmagsite':
+            $sitebg = 'djmag_testpage_backdrop.jpg';
+            $sitebgcolor = '#000';
+            break;  
+        case 'westlondonsite':
+            $sitebg = 'westlondon_testpage_backdrop.jpg';
+            $sitebgcolor = '#fff';
+            break;                                      
     }
 
     $htmlpage = fopen($filepath, 'w');
