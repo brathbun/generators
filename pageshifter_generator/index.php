@@ -141,6 +141,16 @@
 						</div>
 
 						<div class="input">
+						<input class="highlight largeInput" id="instagram" type="text" name="instagram" value="##EVENT_ig##/REDIRURL=INSTAGRAM_URL_HERE" placeholder="##EVENT_ig##/REDIRURL=INSTAGRAM_URL_HERE"/>
+						<div class="label"><div class="labelText">'Instagram' tracking macro <span class='italic'>*Leave ##EVENT_ig##/REDIRURL= at the beginning.</span></div></div>
+						</div>
+
+						<div class="input">
+						<input class="highlight largeInput" id="tumbler" type="text" name="tumbler" value="##EVENT_tm##/REDIRURL=TUMBLR_URL_HERE" placeholder="##EVENT_tm##/REDIRURL=TUMBLR_URL_HERE"/>
+						<div class="label"><div class="labelText">'Tumbler' tracking macro <span class='italic'>*Leave ##EVENT_tm##/REDIRURL= at the beginning.</span></div></div>
+						</div>
+
+						<div class="input">
 						<input class="highlight largeInput" id="impression" type="text" name="impression" value="3RD_PARTY_IMPRESSION_TRACKER_GOES_HERE##BUSTER##" placeholder="3RD_PARTY_IMPRESSION_TRACKER_GOES_HERE##BUSTER##"/>
 						<div class="label"><div class="labelText">3rd party impression tracker <span class='italic'>*Leave ##BUSTER## at the end.</span></div></div>						
 						</div>
@@ -192,6 +202,25 @@
 						<div class="label"><div class="labelText">Click tracker #10</div></div>						
 						</div>
 						<!-- Click Tracking Macros 1-10 End -->
+
+						<!-- Interaction Tracking Macros 1-4 Start -->
+						<div class="input">
+						<input class="highlight largeInput" id="interaction1" type="text" name="interaction1" placeholder="##EVENT_i1##"/>
+						<div class="label"><div class="labelText">Interaction One</div></div>						
+						</div>
+						<div class="input">
+						<input class="highlight largeInput" id="interaction2" type="text" name="interaction2" placeholder="##EVENT_i2##"/>
+						<div class="label"><div class="labelText">Interaction Two</div></div>						
+						</div>
+						<div class="input">
+						<input class="highlight largeInput" id="interaction3" type="text" name="interaction3" placeholder="##EVENT_i3##"/>
+						<div class="label"><div class="labelText">Interaction Three</div></div>						
+						</div>
+						<div class="input">
+						<input class="highlight largeInput" id="interaction4" type="text" name="interaction4" placeholder="##EVENT_i4##"/>
+						<div class="label"><div class="labelText">Interaction Four</div></div>						
+						</div>
+						<!-- Interaction Tracking Macros 1-4 End -->
 
 						<!-- VAST Tracking Macros Start -->
 						<div class="input">

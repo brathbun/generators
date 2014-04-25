@@ -172,6 +172,8 @@ $(document).ready(function(){
 		var facebook = $('#facebook').val();			
 		var twitter = $('#twitter').val();
 		var pinterest = $('#pinterest').val();
+		var instagram = $('#instagram').val();
+		var tumbler = $('#tumbler').val();
 		var impression = $('#impression').val();
 		var skinClickTrack = $('#skinClickTrack').val();		
 		var clickTrackOne = $('#clickTrackOne').val();
@@ -193,6 +195,10 @@ $(document).ready(function(){
 		var clickTrackEight = $('#clickTrackEight').val();
 		var clickTrackNine = $('#clickTrackNine').val();
 		var clickTrackTen = $('#clickTrackTen').val();
+		var interaction1 = $('#interaction1').val();
+		var interaction2 = $('#interaction2').val();
+		var interaction3 = $('#interaction3').val();
+		var interaction4 = $('#interaction4').val();
 
 		var tag = '<script> \n'  +
 '// Burst Media PageShifter \n' +
@@ -220,23 +226,38 @@ $(document).ready(function(){
 '\n' +
 'var BMTH_clickTAG = { \n' +
 '	\'skin\': \''+skinClickTrack+'\', \n' +
-'	\'one\': \''+clickTrackOne+'\' \n' +
+'	\'one\': \''+clickTrackOne+'\', \n' +
+'	\'two\': \''+clickTrackTwo+'\', //Remove line if not used\n' +
+'	\'three\': \''+clickTrackThree+'\', //Remove line if not used\n' +
+'	\'four\': \''+clickTrackFour+'\', //Remove line if not used\n' +
+'	\'five\': \''+clickTrackFive+'\', //Remove line if not used\n' +
+'	\'six\': \''+clickTrackSix+'\', //Remove line if not used\n' +
+'	\'seven\': \''+clickTrackSeven+'\', //Remove line if not used\n' +
+'	\'eight\': \''+clickTrackEight+'\', //Remove line if not used\n' +
+'	\'nine\': \''+clickTrackNine+'\', //Remove line if not used\n' +
+'	\'ten\': \''+clickTrackTen+'\' //Remove line if not used\n' +
 '} \n' +
 '\n' +
 'var BMTH_events = { \n' +
-'		\'vast_start\': \''+vastStart+'\', \n' +
-'		\'vast_fq\': \''+vastFirstQuartile+'\', \n' +
-'		\'vast_mp\': \''+vastMidPoint+'\', \n' +
-'		\'vast_tq\': \''+vastThirdQuartile+'\', \n' +
-'		\'vast_co\': \''+vastComplete+'\', \n' +
-'		\'facebook\': \''+facebook+'\', \n' +
-'		\'pinterest\': \''+pinterest+'\', \n' +
-'		\'twitter\': \''+twitter+'\' \n' +
+'	\'vast_start\': \''+vastStart+'\', \n' +
+'	\'vast_fq\': \''+vastFirstQuartile+'\', \n' +
+'	\'vast_mp\': \''+vastMidPoint+'\', \n' +
+'	\'vast_tq\': \''+vastThirdQuartile+'\', \n' +
+'	\'vast_co\': \''+vastComplete+'\', \n' +
+'	\'facebook\': \''+facebook+'\', \n' +
+'	\'pinterest\': \''+pinterest+'\', \n' +
+'	\'twitter\': \''+twitter+'\', \n' +
+'	\'instagram\': \''+instagram+'\', \n' +
+'	\'tumbler\': \''+tumbler+'\', \n' +
+'	\'i1\': \''+interaction1+'\', //Remove line if not used\n' +
+'	\'i2\': \''+interaction2+'\', //Remove line if not used\n' +
+'	\'i3\': \''+interaction3+'\', //Remove line if not used\n' +
+'	\'i4\': \''+interaction4+'\' //Remove line if not used\n' +
 '} \n' +
 '\n' +
 'document.write(\'<img src="\' + BMTH_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +
 'document.write(\'<scr'+'ipt type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></scr\'+\'ipt>\'); \n' +
-'document.write(\'<scr'+'ipt type="text/javascript" src="http://static-cdn.labs.burstnet.com/uploads/rccuj_burst.labs.tophat.js"></scr\'+\'ipt>\'); \n' +
+'document.write(\'<scr'+'ipt type="text/javascript" src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.tophat.js"></scr\'+\'ipt>\'); \n' +
 '</script>';
 
 		$('#tagBox').focus().val(tag).select();
