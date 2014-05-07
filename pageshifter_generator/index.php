@@ -25,13 +25,19 @@
 			<form action="" id="submit" method="POST">
 
 				<div class="radio input">
-					<input type="radio" id="tophatunit" name="unit" value="tophat" checked=true>
-					<label for="tophatunit">Tophat</label>
+					<input type="radio" id="tophatunit" name="unit" value="pagewrap" checked=true>
+					<label for="tophatunit">Pagewrap</label>
 					<input type="radio" id="pushdownunit" name="unit" value="pushdown">
-					<label for="pushdownunit">Pushdown</label>
-					<input type="radio" id="billboardtype" name="unit" value="billboard">
-					<label for="billboardtype">Billboard</label>				
+					<label for="pushdownunit">Pushdown</label>				
 					<div class="label"><div class="labelText">Select Unit</div></div>
+				</div>
+
+				<div class="radio input">
+					<input type="radio" id="fadeani" name="animation" value="fade" checked=true>
+					<label for="fadeani">Fade</label>
+					<input type="radio" id="slideani" name="animation" value="slide">
+					<label for="slideani">Slide</label>			
+					<div class="label"><div class="labelText">Select Animation</div></div>
 				</div>
 
 				<div class="radio input">

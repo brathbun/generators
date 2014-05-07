@@ -152,6 +152,7 @@ $(document).ready(function(){
 	$('#generateTag').click(function(){
 
 		var unit = $('input:radio[name="unit"]:checked').val();
+		var animation = $('input:radio[name="animation"]:checked').val();
 		var typeproperty = $('input:radio[name="typeproperty"]:checked').val();
 		var width = $('#width').val();
 		var colheight = $('#colheight').val();
@@ -206,6 +207,7 @@ $(document).ready(function(){
 '\n' +
 'var BMTH_setup = { \n' +
 '	\'unit\': \''+unit+'\', \n' +
+'	\'animation\': \''+animation+'\', \n' +
 '	\'type\': \''+typeproperty+'\', \n' +
 '	\'width\': \''+width+'\', \n' +
 '	\'height\': \''+colheight+'\', \n' +
