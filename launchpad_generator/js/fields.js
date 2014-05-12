@@ -64,7 +64,8 @@ $(document).ready(function(){
 		$('#femalefirstgraphic').css('display', 'none');
 		$('#greatchefsgraphic').css('display', 'none');
 		$('#djmaggraphic').css('display', 'none');
-		$('#westlondongraphic').css('display', 'none');		
+		$('#westlondongraphic').css('display', 'none');
+		$('#nocigargraphic').css('display', 'none');	
 		$('#generate').attr('value', 'Generate on MomIQ.tv');
 	});
 	$('#elladaily').click(function() {
@@ -75,7 +76,8 @@ $(document).ready(function(){
 		$('#femalefirstgraphic').css('display', 'none');
 		$('#greatchefsgraphic').css('display', 'none');
 		$('#djmaggraphic').css('display', 'none');
-		$('#westlondongraphic').css('display', 'none');			
+		$('#westlondongraphic').css('display', 'none');
+		$('#nocigargraphic').css('display', 'none');
 		$('#generate').attr('value', 'Generate on EllaDaily.com');
 	});
 	$('#giantrealm').click(function() {
@@ -86,7 +88,8 @@ $(document).ready(function(){
 		$('#femalefirstgraphic').css('display', 'none');
 		$('#greatchefsgraphic').css('display', 'none');
 		$('#djmaggraphic').css('display', 'none');
-		$('#westlondongraphic').css('display', 'none');			
+		$('#westlondongraphic').css('display', 'none');	
+		$('#nocigargraphic').css('display', 'none');		
 		$('#generate').attr('value', 'Generate on GiantRealm.com');
 	});	
 	$('#theladbible').click(function() {
@@ -97,7 +100,8 @@ $(document).ready(function(){
 		$('#femalefirstgraphic').css('display', 'none');
 		$('#greatchefsgraphic').css('display', 'none');
 		$('#djmaggraphic').css('display', 'none');
-		$('#westlondongraphic').css('display', 'none');			
+		$('#westlondongraphic').css('display', 'none');
+		$('#nocigargraphic').css('display', 'none');		
 		$('#generate').attr('value', 'Generate on TheLadBible.com');
 	});
 	$('#femalefirst').click(function() {
@@ -108,7 +112,8 @@ $(document).ready(function(){
 		$('#femalefirstgraphic').css('display', 'block');
 		$('#greatchefsgraphic').css('display', 'none');
 		$('#djmaggraphic').css('display', 'none');
-		$('#westlondongraphic').css('display', 'none');			
+		$('#westlondongraphic').css('display', 'none');
+		$('#nocigargraphic').css('display', 'none');			
 		$('#generate').attr('value', 'Generate on Femalefirst.co.uk');
 	});
 	$('#greatbritishchefs').click(function() {
@@ -119,7 +124,8 @@ $(document).ready(function(){
 		$('#femalefirstgraphic').css('display', 'none');
 		$('#greatchefsgraphic').css('display', 'block');
 		$('#djmaggraphic').css('display', 'none');
-		$('#westlondongraphic').css('display', 'none');			
+		$('#westlondongraphic').css('display', 'none');
+		$('#nocigargraphic').css('display', 'none');
 		$('#generate').attr('value', 'Generate on Greatbritishchefs.co.uk');
 	});
 	$('#djmag').click(function() {
@@ -130,7 +136,8 @@ $(document).ready(function(){
 		$('#femalefirstgraphic').css('display', 'none');
 		$('#greatchefsgraphic').css('display', 'none');
 		$('#djmaggraphic').css('display', 'block');
-		$('#westlondongraphic').css('display', 'none');			
+		$('#westlondongraphic').css('display', 'none');
+		$('#nocigargraphic').css('display', 'none');
 		$('#generate').attr('value', 'Generate on DJMag.co.uk ');
 	});	
 	$('#westlondonmum').click(function() {
@@ -141,8 +148,21 @@ $(document).ready(function(){
 		$('#femalefirstgraphic').css('display', 'none');
 		$('#greatchefsgraphic').css('display', 'none');
 		$('#djmaggraphic').css('display', 'none');
-		$('#westlondongraphic').css('display', 'block');			
+		$('#westlondongraphic').css('display', 'block');
+		$('#nocigargraphic').css('display', 'none');
 		$('#generate').attr('value', 'Generate on Westlondonmum.com');
+	});
+	$('#nocigar').click(function() {
+		$('#momiqgraphic').css('display', 'none');
+		$('#ellagraphic').css('display', 'none');
+		$('#grgraphic').css('display', 'none');
+		$('#biblegraphic').css('display', 'none');
+		$('#femalefirstgraphic').css('display', 'none');
+		$('#greatchefsgraphic').css('display', 'none');
+		$('#djmaggraphic').css('display', 'none');
+		$('#westlondongraphic').css('display', 'none');
+		$('#nocigargraphic').css('display', 'block');		
+		$('#generate').attr('value', 'Generate on Nocigarmagazine.com');
 	});	
 
 	//Lightbox Jquery
