@@ -278,13 +278,15 @@
 				<label for="theladbible">TheLadBible</label>
 
 				<input type="radio" id="femalefirst" name="demosite" value="femalefirstsite">
-				<label for="femalefirst">FemaleFirst</label>
+				<label for="femalefirst">FemaleFirst</label><br />
 				<input type="radio" id="greatbritishchefs" name="demosite" value="greatchefsite">
 				<label for="greatbritishchefs">GreatBritishChefs</label>
 				<input type="radio" id="djmag" name="demosite" value="djmagsite">
 				<label for="djmag">DJMag</label>
 				<input type="radio" id="westlondonmum" name="demosite" value="westlondonsite">
 				<label for="westlondonmum">WestLondonmum</label>
+				<input type="radio" id="nocigar" name="demosite" value="nocigarsite">
+				<label for="nocigar">NoCigar</label>
 
 				</p>
 
@@ -311,6 +313,9 @@
 				</div>
 				<div class="" id="westlondongraphic">
 					<img src="img/westlondon_thumb.jpg" />
+				</div>
+				<div class="" id="nocigargraphic">
+					<img src="img/nocigar_thumb.jpg" />
 				</div>				
 
 				<p><input onclick="submitForm('generate.php')" id="generate" type="button" value="Generate on MomIQ.tv"></p>

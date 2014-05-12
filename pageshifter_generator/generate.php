@@ -48,7 +48,11 @@
         case 'westlondonsite':
             $sitebg = 'westlondon_testpage_backdrop.jpg';
             $sitebgcolor = '#fff';
-            break;                                      
+            break;
+        case 'nocigarsite':
+            $sitebg = 'nocigar_testpage_backdrop.jpg';
+            $sitebgcolor = '#fff';
+            break;                                     
     }
 
     $htmlpage = fopen($filepath, 'w');

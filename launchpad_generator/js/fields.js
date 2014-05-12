@@ -291,7 +291,7 @@ $(document).ready(function(){
 	$('#exportTag').click(function(){
 		if (!$('#tagBox').val()){
 			$('#notice').slideDown(function(){
-				$('#notice').html('No point in exporting nothing!');
+				$('#notice').html('No point in exporting an empty tag!');
 			});
 		} else {
 			$(this).parent().submit();
