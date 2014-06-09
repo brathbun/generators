@@ -50,7 +50,13 @@ $(document).ready(function(){
         };
 	}).change();
 
-	//Toggle Tracking Parameters
+	//Toggle Sections
+	$('#collapsedParms').click(function() {
+		$('#collapsedParmsInput').toggle();
+	});
+	$('#launchParms').click(function() {
+		$('#launchParmsInput').toggle();
+	});		
 	$('#tracking').click(function() {
 		$('#trackingInput').toggle();
 	});
@@ -171,22 +177,37 @@ $(document).ready(function(){
 	//Generate Tag 
 	$('#generateTag').click(function(){
 
-		var unit = $('input:radio[name="unit"]:checked').val();
-		var animation = $('input:radio[name="animation"]:checked').val();
-		var typeproperty = $('input:radio[name="typeproperty"]:checked').val();
-		var width = $('#width').val();
-		var colheight = $('#colheight').val();
-		var expheight = $('#expheight').val();
-		var colCreative = $('#colCreative').val();
-		var expCreative = $('#expCreative').val();
-		var bgCreative = $('#bgCreative').val();
-		var bgColor = $('#bgColor').val();
-		var expandtypeproperty = $('input:radio[name="expandtypeproperty"]:checked').val();
-		var expandTime = $('#expandTime').val();	
-		var collapsetypeproperty = $('input:radio[name="collapsetypeproperty"]:checked').val();
-		var collapseTime = $('#collapseTime').val();
+		//Collpased Creative
+		var ctype = $('input:radio[name="cType"]:checked').val();
+		var cwidth = $('#cwidth').val();
+		var cheight = $('#cheight').val();
+		var cCreative = $('#cCreative').val();
+		var cbgColor = $('#cbgColor').val();
+		var cpos1 = $('input:radio[name="cpos1"]:checked').val();
+		var cpos2 = $('input:radio[name="cpos2"]:checked').val();
+		var canimation = $('input:radio[name="canimation"]:checked').val();
+		var ctpad = $('#ctpad').val();
+		var cbpad = $('#cbpad').val();
+		var clpad = $('#clpad').val();
+		var crpad = $('#crpad').val();		
+
+		//Launch Creative
+		var ltype = $('input:radio[name="lType"]:checked').val();
+		var lwidth = $('#lwidth').val();
+		var lheight = $('#lheight').val();
+		var lCreative = $('#lCreative').val();
+		var lbgColor = $('#lbgColor').val();
+		var lpos1 = $('input:radio[name="lpos1"]:checked').val();
+		var lpos2 = $('input:radio[name="lpos2"]:checked').val();
+		var lanimation = $('input:radio[name="lanimation"]:checked').val();
+		var ltpad = $('#ltpad').val();
+		var lbpad = $('#lbpad').val();
+		var llpad = $('#llpad').val();
+		var lrpad = $('#lrpad').val();
+
 
 		//Tracking
+		var impression = $('#impression').val();
 		var expandTrack = $('#expandTrack').val();
 		var collapseTrack = $('#collapseTrack').val();
 		var fullTrack = $('#fullTrack').val();
@@ -194,10 +215,11 @@ $(document).ready(function(){
 		var twitter = $('#twitter').val();
 		var pinterest = $('#pinterest').val();
 		var instagram = $('#instagram').val();
-		var tumbler = $('#tumbler').val();
-		var impression = $('#impression').val();
-		var skinClickTrack = $('#skinClickTrack').val();		
-		var clickTrackOne = $('#clickTrackOne').val();
+		var tumblr = $('#tumbler').val();
+		var interaction1 = $('#interaction1').val();
+		var interaction2 = $('#interaction2').val();
+		var interaction3 = $('#interaction3').val();
+		var interaction4 = $('#interaction4').val();
 
 		//VAST Tracking
 		var vastStart = $('#vastStart').val();
@@ -206,7 +228,8 @@ $(document).ready(function(){
 		var vastThirdQuartile = $('#vastThirdQuartile').val();		
 		var vastComplete = $('#vastComplete').val();
 
-		//Additional Click Trackers
+		// Click Trackers
+		var clickTrackOne = $('#clickTrackOne').val();
 		var clickTrackTwo = $('#clickTrackTwo').val();
 		var clickTrackThree = $('#clickTrackThree').val();
 		var clickTrackFour = $('#clickTrackFour').val();
@@ -216,70 +239,71 @@ $(document).ready(function(){
 		var clickTrackEight = $('#clickTrackEight').val();
 		var clickTrackNine = $('#clickTrackNine').val();
 		var clickTrackTen = $('#clickTrackTen').val();
-		var interaction1 = $('#interaction1').val();
-		var interaction2 = $('#interaction2').val();
-		var interaction3 = $('#interaction3').val();
-		var interaction4 = $('#interaction4').val();
 
 		var tag = '<script> \n'  +
-'// Burst Media PageShifter \n' +
-'// Copyright 2014 \n' +
+'// Burst Media Launch Pad version 1.9.8 \n'  +
 '\n' +
-'var BMTH_setup = { \n' +
-'	\'unit\': \''+unit+'\', \n' +
-'	\'animation\': \''+animation+'\', \n' +
-'	\'type\': \''+typeproperty+'\', \n' +
-'	\'width\': \''+width+'\', \n' +
-'	\'height\': \''+colheight+'\', \n' +
-'	\'expandType\': \''+expandtypeproperty+'\', \n' +
-'	\'expandTime\': \''+expandTime+'\', \n' +
-'	\'collapseType\': \''+collapsetypeproperty+'\', \n' +
-'	\'collapseTime\': \''+collapseTime+'\', \n' +
-'	\'collapseCreative\': \''+colCreative+'\', \n' +
-'	\'expandCreative\': \''+expCreative+'\', \n' +
-'	\'expandHeight\': \''+expheight+'\', \n' +
-'	\'bgCreative\': \''+bgCreative+'\', \n' +
-'	\'bgColor\': \''+bgColor+'\', \n' +
-'	\'expandTrack\': \''+expandTrack+'\', \n' +
-'	\'collapseTrack\': \''+collapseTrack+'\', \n' +
-'	\'fullTrack\': \''+fullTrack+'\', \n' +
+'var BMLP_setup = { \n' +
 '	\'impression\': \''+impression+'\' \n' +
 '} \n' +
 '\n' +
-'var BMTH_clickTAG = { \n' +
-'	\'skin\': \''+skinClickTrack+'\', \n' +
-'	\'one\': \''+clickTrackOne+'\', \n' +
-'	\'two\': \''+clickTrackTwo+'\', //Remove line if not used\n' +
-'	\'three\': \''+clickTrackThree+'\', //Remove line if not used\n' +
-'	\'four\': \''+clickTrackFour+'\', //Remove line if not used\n' +
-'	\'five\': \''+clickTrackFive+'\', //Remove line if not used\n' +
-'	\'six\': \''+clickTrackSix+'\', //Remove line if not used\n' +
-'	\'seven\': \''+clickTrackSeven+'\', //Remove line if not used\n' +
-'	\'eight\': \''+clickTrackEight+'\', //Remove line if not used\n' +
-'	\'nine\': \''+clickTrackNine+'\', //Remove line if not used\n' +
-'	\'ten\': \''+clickTrackTen+'\' //Remove line if not used\n' +
+'var BMLP_collapse = { \n' +
+'	\'type\': \''+ctype+'\', \n' +
+'	\'width\': \''+cwidth+'\', \n' +
+'	\'height\': \''+cheight+'\', \n' +
+'	\'creative\': \''+cCreative+'\', \n' +
+'	\'bg\' : \''+cbgColor+'\', \n' +
+'	\'position\': \''+cpos1+' '+cpos2+'\', \n' +
+'	\'animation\': \''+canimation+'\', \n' +
+'	\'padding\': [\''+ctpad+'\', \''+cbpad+'\', \''+clpad+'\', \''+crpad+'\'] \n' +
 '} \n' +
 '\n' +
-'var BMTH_events = { \n' +
+'var BMLP_launch = { \n' +
+'	\'type\': \''+ltype+'\', \n' +
+'	\'width\': \''+lwidth+'\', \n' +
+'	\'height\': \''+lheight+'\', \n' +
+'	\'creative\': \''+lCreative+'\', \n' +
+'	\'bg\' : \''+lbgColor+'\', \n' +
+'	\'position\': \''+lpos1+' '+lpos2+'\', \n' +
+'	\'animation\': \''+lanimation+'\', \n' +
+'	\'padding\': [\''+ltpad+'\', \''+lbpad+'\', \''+llpad+'\', \''+lrpad+'\'] \n' +
+'} \n' +
+'\n' +
+'var BMLP_clickTAG = { \n' +
+'	\'one\': \''+clickTrackOne+'\', \n' +
+'	\'two\': \''+clickTrackTwo+'\', \n' +
+'	\'three\': \''+clickTrackThree+'\', \n' +
+'	\'four\': \''+clickTrackFour+'\', \n' +
+'	\'five\': \''+clickTrackFive+'\', \n' +
+'	\'six\': \''+clickTrackSix+'\', \n' +
+'	\'seven\': \''+clickTrackSeven+'\', \n' +
+'	\'eight\': \''+clickTrackEight+'\', \n' +
+'	\'nine\': \''+clickTrackNine+'\', \n' +
+'	\'ten\': \''+clickTrackTen+'\' \n' +
+'} \n' +
+'\n' +
+'var BMLP_events = { \n' +
+'	\'facebook\': \''+facebook+'\', \n' +
+'	\'pinterest\': \''+pinterest+'\', \n' +
+'	\'twitter\': \''+twitter+'\', \n' +
+'	\'instagram\': \''+instagram+'\', \n' +
+'	\'tumblr\': \''+tumblr+'\', \n' +
+'	\'i1\': \''+interaction1+'\', \n' +
+'	\'i2\': \''+interaction2+'\', \n' +
+'	\'i3\': \''+interaction3+'\', \n' +
+'	\'i4\': \''+interaction4+'\', \n' +
 '	\'vast_start\': \''+vastStart+'\', \n' +
 '	\'vast_fq\': \''+vastFirstQuartile+'\', \n' +
 '	\'vast_mp\': \''+vastMidPoint+'\', \n' +
 '	\'vast_tq\': \''+vastThirdQuartile+'\', \n' +
 '	\'vast_co\': \''+vastComplete+'\', \n' +
-'	\'facebook\': \''+facebook+'\', \n' +
-'	\'pinterest\': \''+pinterest+'\', \n' +
-'	\'twitter\': \''+twitter+'\', \n' +
-'	\'instagram\': \''+instagram+'\', \n' +
-'	\'tumbler\': \''+tumbler+'\', \n' +
-'	\'i1\': \''+interaction1+'\', //Remove line if not used\n' +
-'	\'i2\': \''+interaction2+'\', //Remove line if not used\n' +
-'	\'i3\': \''+interaction3+'\', //Remove line if not used\n' +
-'	\'i4\': \''+interaction4+'\' //Remove line if not used\n' +
+'	\'closeTrack\': \'##EVENT_cp##\', \n' +
+'	\'launchTrack\': \'##EVENT_ex##\', \n' +
+'	\'fullTrack\': \'##EVENT_fv##\' \n' +
 '} \n' +
 '\n' +
-'document.write(\'<img src="\' + BMTH_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +
-'document.write(\'<scr'+'ipt type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></scr\'+\'ipt>\'); \n' +
-'document.write(\'<scr'+'ipt type="text/javascript" src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.tophat.js"></scr\'+\'ipt>\'); \n' +
+'document.write(\'<img src="\' + BMLP_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +
+'document.write(\'<scr\'+\'ipt async src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.launchpad.js"></scr\'+\'ipt>\'); \n' +
 '</script>';
 
 		$('#tagBox').focus().val(tag).select();
@@ -289,23 +313,8 @@ $(document).ready(function(){
 	//Test Page Generation Validation
 	$('#generate').click(function(){
 
-		var expandtype = $('input:radio[name="expandtypeproperty"]:checked').val();
-		var collapsetype = $('input:radio[name="collapsetypeproperty"]:checked').val();
-		var expandTime = $('#expandTime').val();
-		var collapseTime = $('#collapseTime').val();		
+		$(this).parent().parent().submit();
 
-		if (expandtype == 'auto' || collapsetype == 'auto') {
-			if (!expandTime && !collapseTime) {
-
-				$('#notice').slideDown(function(){
-					$('#notice').html('Please enter a number of seconds for Collapsed or Expanded State.');
-				});
-			} else {
-				$(this).parent().parent().submit();
-			}
-		} else {
-			$(this).parent().parent().submit();
-		}
 	});
 
 	$('#exportTag').click(function(){

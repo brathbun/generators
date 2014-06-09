@@ -41,9 +41,10 @@
                 \'height\': 350,
                 \'autoplay\': true,
                 \'vol\': 50,
+                \'playlist_xml\': \'\',
                 \'tag\': '.$tag.'
             }
-            document.write(\'<scr\'+\'ipt type=\"text/javascript\" src=\"http://bvp.burstmedia.com/player.js?23\"></scr\'+\'ipt>\');
+            document.write(\'<scr\'+\'ipt type="text/javascript" src="http://bvp.burstmedia.com/player.js?24"></scr\'+\'ipt>\');
             </script>
 
         ';
@@ -66,7 +67,7 @@
                 \'tag\': '.$tag.'  
             }
             document.write(\'<scr\'+\'ipt type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></scr\'+\'ipt>\');
-            document.write(\'<scr\'+\'ipt type="text/javascript" src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.videoslider.js?23"></scr\'+\'ipt>\');            
+            document.write(\'<scr\'+\'ipt type="text/javascript" src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.videoslider.js?24"></scr\'+\'ipt>\');            
             </script>
 
         ';

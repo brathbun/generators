@@ -21,7 +21,7 @@ $(document).ready(function(){
 				$('#notice').html('Please fill out both fields!');
 			});			
 		} else {
-			$('#vastTag').focus().val('http://www.burstnet.com/burstmedia/display/s=' + site +'/a=' + letter + '/v=4.0S/sz=' + size + '/NZ/SA/' + Math.floor(Math.random() * 9999999999 + 1) + '/K=videopair/ORGURL=<referer url>/EORGURL/vid=<video id>/vtitle=<URL-encoded video title>/vdesc=<URL-encoded video description>/RETURN-CODE/TXT/').select();
+			$('#vastTag').focus().val('http://www.burstnet.com/burstmedia/display/s=' + site +'/a=' + letter + '/v=4.0S/sz=' + size + '/NZ/SA/' + Math.floor(Math.random() * 9999999999 + 1) + '/K=videopair/vid=<video id>/vtitle=<URL-encoded video title>/vdesc=<URL-encoded video description>/RETURN-CODE/TXT/').select();
 		}
 	});
 });

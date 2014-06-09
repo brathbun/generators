@@ -7,7 +7,7 @@ if (!empty($_POST['tagBoxValue'])) {
         $client = $_POST['client'].'-';
     }
 
-    header('Content-Disposition: attachment; filename="'.$client.'pageShifter-tags.txt"');
+    header('Content-Disposition: attachment; filename="'.$client.'launchpad-tags.txt"');
 	header('Content-Type: text/plain'); # Don't use application/force-download - it's not a real MIME type, and the Content-Disposition header is sufficient
 	header('Content-Length: ' . strlen($tag));
 	header('Connection: close');
