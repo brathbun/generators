@@ -38,7 +38,8 @@ body {
 #uploadWindow {display:none;}
 
 #ellagraphic, #grgraphic, #biblegraphic,
-#femalefirstgraphic, #greatchefsgraphic, #djmaggraphic,#westlondongraphic,
+#femalefirstgraphic, #greatchefsgraphic,
+#djmaggraphic,#westlondongraphic, #nocigargraphic,
 #expandTimeInput, #collapseTimeInput {display:none;}
 
 .label { 

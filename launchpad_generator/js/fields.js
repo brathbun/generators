@@ -208,8 +208,8 @@ $(document).ready(function(){
 
 		//Tracking
 		var impression = $('#impression').val();
-		var expandTrack = $('#expandTrack').val();
-		var collapseTrack = $('#collapseTrack').val();
+		var launchTrack = $('#expandTrack').val();
+		var closeTrack = $('#collapseTrack').val();
 		var fullTrack = $('#fullTrack').val();
 		var facebook = $('#facebook').val();			
 		var twitter = $('#twitter').val();
@@ -297,9 +297,9 @@ $(document).ready(function(){
 '	\'vast_mp\': \''+vastMidPoint+'\', \n' +
 '	\'vast_tq\': \''+vastThirdQuartile+'\', \n' +
 '	\'vast_co\': \''+vastComplete+'\', \n' +
-'	\'closeTrack\': \'##EVENT_cp##\', \n' +
-'	\'launchTrack\': \'##EVENT_ex##\', \n' +
-'	\'fullTrack\': \'##EVENT_fv##\' \n' +
+'	\'closeTrack\': \''+closeTrack+'\', \n' +
+'	\'launchTrack\': \''+launchTrack+'\', \n' +
+'	\'fullTrack\': \''+fullTrack+'\' \n' +
 '} \n' +
 '\n' +
 'document.write(\'<img src="\' + BMLP_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +

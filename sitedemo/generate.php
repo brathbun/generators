@@ -1,6 +1,7 @@
 <?php
 
     $tag = htmlspecialchars_decode($_POST['tagBoxValue']);
+    $type = $_POST['adsizeSelect'];
     $demosite = stripslashes($_POST['demosite']);
     $page_title = "PageShifter Demo";
 
@@ -20,35 +21,84 @@
         case 'momiqsite':
             $sitebg = 'momiq_testpage_backdrop.jpg';
             $sitebgcolor = '#F3FCFF';
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:122px;right:587px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:621px;right:516px;}';
+            }            
             break;
         case 'ellasite':
             $sitebg = 'ella_testpage_backdrop.jpg';
             $sitebgcolor = '#fff';
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:120px;right:587px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:224px;right:471px;}';
+            }               
             break;
         case 'giantsite':
             $sitebg = 'giantrealm_testpage_backdrop.jpg';
             $sitebgcolor = '#333';
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:97px;right:587px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:212px;right:475px;}';
+            }              
             break;
         case 'biblesite':
             $sitebg = 'ladbible_testpage_backdrop.jpg';
             $sitebgcolor = '#e3e7e6';
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:61px;right:586px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:528px;right:480px;}';
+            }            
             break;
         case 'femalefirstsite':
             $sitebg = 'femalefirst_testpage_backdrop.jpg';
             $sitebgcolor = '#efefef';
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:3px;right:587px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:220px;right:490px;}';
+            }               
             break;  
         case 'greatchefsite':
             $sitebg = 'greatchefs_testpage_backdrop.jpg';
             $sitebgcolor = '#fff';
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:27px;right:493px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:704px;right:485px;}';
+            }              
             break;  
         case 'djmagsite':
             $sitebg = 'djmag_testpage_backdrop.jpg';
             $sitebgcolor = '#000';
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:18px;right:573px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:119px;right:474px;}';
+            }            
             break;  
         case 'westlondonsite':
             $sitebg = 'westlondon_testpage_backdrop.jpg';
             $sitebgcolor = '#fff';
-            break;                                      
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:40px;right:484px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:287px;right:475px;}';
+            }            
+            break;
+        case 'nocigarsite':
+            $sitebg = 'nocigar_testpage_backdrop.jpg';
+            $sitebgcolor = '#fff';
+            if ($type == 'leader') {
+                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:108px;right:484px;}';
+            } elseif ($type == 'box') {
+                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:211px;right:484px;}';
+            }              
+            break;                                  
     }
 
     $htmlpage = fopen($filepath, 'w');
@@ -63,7 +113,7 @@
 <link href=\"favicon.ico\" rel=\"shortcut icon\" />
 <link href=\"http://fonts.googleapis.com/css?family=Roboto:700,500,300italic\" rel=\"stylesheet\" type=\"text/css\">
 <link rel=\"stylesheet\" href=\"../go/css/style.css\">
-<style>body{background:{$sitebgcolor};}</style>
+<style>body{background:{$sitebgcolor};}$adsize</style>
 </head>
 <body>
 

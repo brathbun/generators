@@ -38,7 +38,7 @@ body {
 #uploadWindow {display:none;}
 
 #ellagraphic, #grgraphic, #biblegraphic,
-#femalefirstgraphic, #greatchefsgraphic, #djmaggraphic,#westlondongraphic,
+#femalefirstgraphic, #greatchefsgraphic, #djmaggraphic,#westlondongraphic, #nocigargraphic,
 #expandTimeInput, #collapseTimeInput {display:none;}
 
 .label { 
@@ -79,7 +79,7 @@ input[type=radio] { display:none; }
 input[type=radio] + label {
     display:inline-block;
     margin:-2px;
-    padding: 4px 12px;
+    padding: 4px 6px;
     margin-bottom: 0;
     font-size: medium;
     line-height: 20px;
@@ -105,6 +105,8 @@ input[type=radio] + label {
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
 }
+
+select {font-size: 18px;width: 182px;height: 32px;outline: none;border-radius: 6px;}
  
 input[type=radio]:checked + label {
        background-image: none;

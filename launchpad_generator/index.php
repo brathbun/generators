@@ -117,7 +117,7 @@
 						<div class="input" id="launchheight">
 							<input class="highlight smallInput" id="lheight" type="text" name="lheight" placeholder="100" maxlength="4" />
 							<div class="label"><div class="labelText">Enter the height of your launch creative (in px)</div></div>
-						</div>						
+						</div>				
 						<div class="input" id="launchCreative">
 							<div id="uploadbutton"><input class="uploadIframe" id="uploadfile" type="button" value="Upload"><br/></div>
 							<input class="highlight largeInput" id="lCreative" type="text" name="lCreative" placeholder="http://..."/>
@@ -129,7 +129,7 @@
 						</div>
 						<div class="radio input">
 							<input type="radio" id="lbottom" name="lpos1" value="bottom" checked=true>
-							<label for="cbottom">Bottom</label>
+							<label for="lbottom">Bottom</label>
 							<input type="radio" id="lvcenter" name="lpos1" value="center">
 							<label for="lvcenter">Center</label>								
 							<input type="radio" id="ltop" name="lpos1" value="top">
