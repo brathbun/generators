@@ -3,18 +3,18 @@
     $tag = htmlspecialchars_decode($_POST['tagBoxValue']);
     $type = $_POST['adsizeSelect'];
     $demosite = stripslashes($_POST['demosite']);
-    $page_title = "PageShifter Demo";
 
     //Random AlphaNumeric String
     $length = rand(4,6);
     $random = substr(md5(rand(0, 1000000)), 0, $length);
 
-    $filepath= 'go/ad_'.$random.'.html';
+    $filepath= 'go/demo_'.$random.'.html';
     
     if (!empty($_POST['client'])) {
         $client = $_POST['client'];
-        $page_title .= ' for '.$client;
+        $page_title .= $client . ' Demo';
         $filepath = str_replace('go/','go/'.urlencode($client).'_',$filepath);
+        $page_title = str_replace('_',' ',$page_title);
     }
 
     switch ($demosite) {
@@ -107,7 +107,7 @@
 <head>
 <meta charset=\"utf-8\">
 <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-<title>{$page_title}</title>
+<title>{$page_title} - Burstmediadesign.com</title>
 <meta name=\"description\" content=\"{$page_title}\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 <link href=\"favicon.ico\" rel=\"shortcut icon\" />
