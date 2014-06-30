@@ -29,10 +29,11 @@
 				</div>
 
 				<div class="input">
-					<select class="highlight" name="adsizeSelect">
+					<select class="highlight" id="unitSelect" name="adsizeSelect">
 						<option value="layer">Layer</option>
 						<option value="leader">728x90</option>
 						<option value="box">300x250</option>
+						<option value="mobile">Mobile</option>
 					</select>
 					<span class="italic">Select the type of Ad</span><br />
 				</div>					
@@ -42,6 +43,8 @@
 					<input class="highlight" type="text" name="client" placeholder="Client Name"/>
 					<span class="italic">Add client name *Optional</span><br />
 				</div>				
+
+				<div id="mobileHide">
 
 				<h3>Select the site you wish to display your ad on.</h3>
 
@@ -94,7 +97,10 @@
 				</div>
 				<div class="" id="nocigargraphic">
 					<img src="img/nocigar_thumb.jpg" />
-				</div>				
+				</div>
+
+				<!-- End Mobile Hide -->
+				</div>			
 
 				<p><input onclick="submitForm('generate.php')" id="generate" type="button" value="Generate on MomIQ.tv"></p>
 

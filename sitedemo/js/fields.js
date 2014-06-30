@@ -26,6 +26,17 @@ $(document).ready(function(){
 		});
 	});
 
+	$('#unitSelect').change(function() {
+		var unitSelect = $('#unitSelect').val();
+		if (unitSelect == 'mobile') {
+			$('#mobileHide').css('display', 'none'); 
+			$('#generate').attr('value', 'Generate on Mobile Site');			
+		} else {
+			$('#mobileHide').css('display', 'block');
+			$('#generate').attr('value', 'Generate on Display Site');			
+		}
+	});
+	
 	//Auto Expand/Collapse Timing Field Hide/Show
 	$('input[name=expandtypeproperty]').change(function()  {
         switch ($('input[name=expandtypeproperty]:checked').val()) {

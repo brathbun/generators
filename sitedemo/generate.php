@@ -102,6 +102,9 @@
     }
 
     $htmlpage = fopen($filepath, 'w');
+
+    if ($type != 'mobile') {
+
     fwrite($htmlpage, "<!DOCTYPE html>
 <html>
 <head>
@@ -134,6 +137,42 @@
 </html>"
 
 );
+    } else {
+
+    fwrite($htmlpage, "<!DOCTYPE html>
+<html>
+<head>
+<meta charset=\"utf-8\">
+<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+<title>{$page_title} - Burstmediadesign.com</title>
+<meta name=\"description\" content=\"{$page_title}\">
+<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+<link href=\"favicon.ico\" rel=\"shortcut icon\" />
+<link href=\"http://fonts.googleapis.com/css?family=Roboto:700,500,300italic\" rel=\"stylesheet\" type=\"text/css\">
+<link rel=\"stylesheet\" href=\"../go/css/mobile.css\">
+<style>body{background:{$sitebgcolor};}$adsize</style>
+</head>
+<body>
+
+<div id=\"wrapper\">
+<div id=\"container\">
+<div id=\"content\">
+<div id=\"adtag\">{$tag}</div>
+<div id=\"maincontent\">
+<img src=\"../img/mobile_head.jpg\" />
+</div>
+
+<div id=\"pagetitle\">{$page_title}</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>"
+
+);
+
+    }
     fclose($htmlpage);
     ob_start();
     header('X-XSS-Protection: 0');
