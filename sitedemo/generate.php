@@ -22,81 +22,81 @@
             $sitebg = 'momiq_testpage_backdrop.jpg';
             $sitebgcolor = '#F3FCFF';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:122px;right:587px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:212px;right:-121px;margin-top: -90px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:621px;right:516px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:871px;right:-620px;margin-top: -250px;}';
             }            
             break;
         case 'ellasite':
             $sitebg = 'ella_testpage_backdrop.jpg';
             $sitebgcolor = '#fff';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:120px;right:587px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:210px;right:-121px;margin-top: -90px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:224px;right:471px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:474px;right:-665px;margin-top: -250px;}';
             }               
             break;
         case 'giantsite':
             $sitebg = 'giantrealm_testpage_backdrop.jpg';
             $sitebgcolor = '#333';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:97px;right:587px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:187px;right:-121px;margin-top: -90px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:212px;right:475px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:462px;right:-661px;margin-top: -250px;}';
             }              
             break;
         case 'biblesite':
             $sitebg = 'ladbible_testpage_backdrop.jpg';
             $sitebgcolor = '#e3e7e6';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:61px;right:586px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:151px;right:-122px;margin-top: -90px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:528px;right:480px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:778px;right:-656px;margin-top: -250px;}';
             }            
             break;
         case 'femalefirstsite':
             $sitebg = 'femalefirst_testpage_backdrop.jpg';
             $sitebgcolor = '#efefef';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:3px;right:587px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:93px;right:-121px;margin-top: -90px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:220px;right:490px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:470px;right:-646px;margin-top: -250px;}';
             }               
             break;  
         case 'greatchefsite':
             $sitebg = 'greatchefs_testpage_backdrop.jpg';
             $sitebgcolor = '#fff';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:27px;right:493px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:117px;right:-215px;margin-top: -90px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:704px;right:485px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:954px;right:-651px;margin-top: -250px;}';
             }              
             break;  
         case 'djmagsite':
             $sitebg = 'djmag_testpage_backdrop.jpg';
             $sitebgcolor = '#000';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:18px;right:573px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:108px;right:-136px;margin-top: -90px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:119px;right:474px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:369px;right:-663px;margin-top: -250px;}';
             }            
             break;  
         case 'westlondonsite':
             $sitebg = 'westlondon_testpage_backdrop.jpg';
             $sitebgcolor = '#fff';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:40px;right:484px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:130px;right:-223px;margin-top: -90px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:287px;right:475px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:536px;right:-661px;margin-top: -250px;}';
             }            
             break;
         case 'nocigarsite':
             $sitebg = 'nocigar_testpage_backdrop.jpg';
             $sitebgcolor = '#fff';
             if ($type == 'leader') {
-                $adsize = '#adtag{width:728px;height:90px;position:absolute;top:108px;right:484px;}';
+                $adsize = '#adtag{width:728px;height:90px;position:relative;top:0px;right:-130px;}';
             } elseif ($type == 'box') {
-                $adsize = '#adtag{width:300px;height:250px;position:absolute;top:211px;right:484px;}';
+                $adsize = '#adtag{width:300px;height:250px;position:relative;top:462px;right:-652px;margin-top: -250px;}';
             }              
             break;                                  
     }
@@ -120,7 +120,7 @@
 <div id=\"wrapper\">
 <div id=\"container\">
 <div id=\"content\">
-
+<div id=\"adtag\">{$tag}</div>
 <div id=\"maincontent\">
 <img src=\"../img/{$sitebg}\" />
 </div>
@@ -130,7 +130,6 @@
 </div>
 </div>
 </div>
-<div id=\"adtag\">{$tag}</div>
 </body>
 </html>"
 
