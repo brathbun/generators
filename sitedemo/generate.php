@@ -15,6 +15,8 @@
         $page_title .= $client . ' Demo';
         $filepath = str_replace('go/','go/'.urlencode($client).'_',$filepath);
         $page_title = str_replace('_',' ',$page_title);
+    } else {
+        $page_title = '';
     }
 
     switch ($demosite) {
@@ -101,11 +103,10 @@
             break;                                  
     }
 
-    $htmlpage = fopen($filepath, 'w');
-
     if ($type != 'mobile') {
 
-    fwrite($htmlpage, "<!DOCTYPE html>
+        $htmlpage = fopen($filepath, 'w');
+        fwrite($htmlpage, "<!DOCTYPE html>
 <html>
 <head>
 <meta charset=\"utf-8\">
@@ -137,9 +138,19 @@
 </html>"
 
 );
+    
+        fclose($htmlpage);
+        ob_start();
+        header('X-XSS-Protection: 0');
+        header('Location: ' . $filepath);
+        ob_end_flush();
+
     } else {
 
-    fwrite($htmlpage, "<!DOCTYPE html>
+        $filepathIF = str_replace('.html','_iframe.html',$filepath);
+
+        $htmlpageIF = fopen($filepathIF, 'w');
+        fwrite($htmlpageIF, "<!DOCTYPE html>
 <html>
 <head>
 <meta charset=\"utf-8\">
@@ -150,16 +161,51 @@
 <link href=\"favicon.ico\" rel=\"shortcut icon\" />
 <link href=\"http://fonts.googleapis.com/css?family=Roboto:700,500,300italic\" rel=\"stylesheet\" type=\"text/css\">
 <link rel=\"stylesheet\" href=\"../go/css/mobile.css\">
-<style>body{background:{$sitebgcolor};}$adsize</style>
+<style>body{background:{$sitebgcolor};}</style>
+</head>
+<body>
+
+<div id=\"wrapper\">
+<div id=\"containerIF\">
+<div id=\"adtag\">{$tag}</div>
+</div>
+</div>
+
+</body>
+</html>"
+
+);
+
+        fclose($htmlpageIF);
+
+        $filepathIF = str_replace('go/','',$filepathIF);
+
+        $htmlpage = fopen($filepath, 'w');
+        fwrite($htmlpage, "<!DOCTYPE html>
+<html>
+<head>
+<meta charset=\"utf-8\">
+<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+<title>{$page_title} - Burstmediadesign.com</title>
+<meta name=\"description\" content=\"{$page_title}\">
+<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+<link href=\"favicon.ico\" rel=\"shortcut icon\" />
+<link href=\"http://fonts.googleapis.com/css?family=Roboto:700,500,300italic\" rel=\"stylesheet\" type=\"text/css\">
+<link rel=\"stylesheet\" href=\"../go/css/mobile.css\">
+<style>body{background:{$sitebgcolor};}</style>
 </head>
 <body>
 
 <div id=\"wrapper\">
 <div id=\"container\">
 <div id=\"content\">
-<div id=\"adtag\">{$tag}</div>
 <div id=\"maincontent\">
-<img src=\"../img/mobile_head.jpg\" />
+<div id=\"phone\">
+<img src=\"../img/phone.png\" />
+<div id=\"phonescreen\">
+<iframe style=\"background-color:transparent;border:none;width:100%;height:100%;top:0px;left:0px;\" src=\"{$filepathIF}\"></iframe>
+</div>
+</div>
 </div>
 
 <div id=\"pagetitle\">{$page_title}</div>
@@ -172,11 +218,14 @@
 
 );
 
-    }
     fclose($htmlpage);
     ob_start();
     header('X-XSS-Protection: 0');
     header('Location: ' . $filepath);
     ob_end_flush();
+
+    }
+
+
 
 ?>
