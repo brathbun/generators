@@ -186,10 +186,9 @@ $(document).ready(function(){
 		var cpos1 = $('input:radio[name="cpos1"]:checked').val();
 		var cpos2 = $('input:radio[name="cpos2"]:checked').val();
 		var canimation = $('input:radio[name="canimation"]:checked').val();
-		var ctpad = $('#ctpad').val();
-		var cbpad = $('#cbpad').val();
-		var clpad = $('#clpad').val();
-		var crpad = $('#crpad').val();		
+		var cvpad = $('#cvpad').val();
+		var chpad = $('#chpad').val();
+		var lTime = $('#lTime').val();
 
 		//Launch Creative
 		var ltype = $('input:radio[name="lType"]:checked').val();
@@ -200,11 +199,9 @@ $(document).ready(function(){
 		var lpos1 = $('input:radio[name="lpos1"]:checked').val();
 		var lpos2 = $('input:radio[name="lpos2"]:checked').val();
 		var lanimation = $('input:radio[name="lanimation"]:checked').val();
-		var ltpad = $('#ltpad').val();
-		var lbpad = $('#lbpad').val();
-		var llpad = $('#llpad').val();
-		var lrpad = $('#lrpad').val();
-
+		var lvpad = $('#lvpad').val();
+		var lhpad = $('#lhpad').val();
+		var cTime = $('#cTime').val();
 
 		//Tracking
 		var impression = $('#impression').val();
@@ -241,7 +238,7 @@ $(document).ready(function(){
 		var clickTrackTen = $('#clickTrackTen').val();
 
 		var tag = '<script> \n'  +
-'// Burst Media Launch Pad version 1.9.8 \n'  +
+'// Burst Media Launch Pad version 1.6.0 \n'  +
 '\n' +
 'var BMLP_setup = { \n' +
 '	\'impression\': \''+impression+'\' \n' +
@@ -253,9 +250,10 @@ $(document).ready(function(){
 '	\'height\': \''+cheight+'\', \n' +
 '	\'creative\': \''+cCreative+'\', \n' +
 '	\'bg\' : \''+cbgColor+'\', \n' +
-'	\'position\': \''+cpos1+' '+cpos2+'\', \n' +
+'	\'position\': [\''+cpos1+'\', \''+cpos2+'\'], \n' +
 '	\'animation\': \''+canimation+'\', \n' +
-'	\'padding\': [\''+ctpad+'\', \''+cbpad+'\', \''+clpad+'\', \''+crpad+'\'] \n' +
+'	\'padding\': [\''+cvpad+'\', \''+chpad+'\'] \n' +
+'	\'expandTime\': \''+lTime+'\' \n' +
 '} \n' +
 '\n' +
 'var BMLP_launch = { \n' +
@@ -264,9 +262,10 @@ $(document).ready(function(){
 '	\'height\': \''+lheight+'\', \n' +
 '	\'creative\': \''+lCreative+'\', \n' +
 '	\'bg\' : \''+lbgColor+'\', \n' +
-'	\'position\': \''+lpos1+' '+lpos2+'\', \n' +
+'	\'position\': [\''+lpos1+'\', \''+lpos2+'\'], \n' +
 '	\'animation\': \''+lanimation+'\', \n' +
-'	\'padding\': [\''+ltpad+'\', \''+lbpad+'\', \''+llpad+'\', \''+lrpad+'\'] \n' +
+'	\'padding\': [\''+lvpad+'\', \''+lhpad+'\'], \n' +
+'	\'collapseTime\': \''+cTime+'\' \n' +
 '} \n' +
 '\n' +
 'var BMLP_clickTAG = { \n' +
@@ -303,7 +302,7 @@ $(document).ready(function(){
 '} \n' +
 '\n' +
 'document.write(\'<img src="\' + BMLP_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +
-'document.write(\'<scr\'+\'ipt async src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.launchpad.js"></scr\'+\'ipt>\'); \n' +
+'document.write(\'<scr\'+\'ipt async src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.launchpad.raw.js"></scr\'+\'ipt>\'); \n' +
 '</script>';
 
 		$('#tagBox').focus().val(tag).select();

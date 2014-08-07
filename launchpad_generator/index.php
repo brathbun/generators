@@ -55,7 +55,7 @@
 						</div>
 						<div class="input" id="bgColorInput">
 							<input class="highlight smallInput" id="cbgColor" type="text" name="cbgColor" placeholder="#F1F1F1" maxlength="7" />
-							<div class="label"><div class="labelText">Enter the HEX hash value for the background color. <span class='italic'>*Blank for transparent</span></div></div>
+							<div class="label"><div class="labelText">Enter #HEX or enter URL param: url(http://domain.com/image.png). <span class='italic'>*Blank for transparent</span></div></div>
 						</div>
 						<div class="radio input">
 							<input type="radio" id="cbottom" name="cpos1" value="bottom" checked=true>
@@ -76,19 +76,21 @@
 							<div class="label"><div class="labelText">Select Horizontal Position</div></div>
 						</div>						
 						<div class="radio input">
-							<input type="radio" id="cfadeani" name="canimation" value="fade" checked=true>
+							<input type="radio" id="cslideani" name="canimation" value="slide" checked=true>
+							<label for="cslideani">Slide</label>
+							<input type="radio" id="cfadeani" name="canimation" value="fade">
 							<label for="cfadeani">Fade</label>
-							<input type="radio" id="cslideani" name="canimation" value="slide">
-							<label for="cslideani">Slide</label>			
-							<div class="label"><div class="labelText">Select Animation</div></div>
+							<div class="label"><div class="labelText">Select Launch Animation</div></div>
 						</div>
 						<div class="input" id="cPadding">
-							<input class="highlight smallInput" id="ctpad" type="text" name="ctpad" value="0" placeholder="0" maxlength="4" />
-							<input class="highlight smallInput" id="cbpad" type="text" name="cbpad" value="0" placeholder="0" maxlength="4" />
-							<input class="highlight smallInput" id="clpad" type="text" name="clpad" value="0" placeholder="0" maxlength="4" />
-							<input class="highlight smallInput" id="crpad" type="text" name="crpad" value="0" placeholder="0" maxlength="4" />
-							<div class="label"><div class="labelText">Top, Bottom, Left, Right Padding <span class='italic'>*in px</span></div></div>
-						</div>						
+							<input class="highlight smallInput" id="cvpad" type="text" name="cvpad" value="0" placeholder="0" maxlength="4" />
+							<input class="highlight smallInput" id="chpad" type="text" name="chpad" value="0" placeholder="0" maxlength="4" />
+							<div class="label"><div class="labelText">Vertical | Horizontal Offset <span class='italic'>*negative and positive values in px accepted</span></div></div>
+						</div>
+						<div class="input" id="colTime">
+							<input class="highlight smallInput" id="lTime" type="text" name="lTime" placeholder="1000"/>
+							<div class="label"><div class="labelText">Enter time to expand in milliseconds <span class='italic'>* 1000 = 1 second</span></div></div>
+						</div>
 					
 					</div>
 
@@ -125,7 +127,7 @@
 						</div>
 						<div class="input" id="bgColorInput">
 							<input class="highlight smallInput" id="lbgColor" type="text" name="lbgColor" placeholder="#F1F1F1" maxlength="7" />
-							<div class="label"><div class="labelText">Enter the HEX hash value for the background color. <span class='italic'>*Blank for transparent</span></div></div>
+							<div class="label"><div class="labelText">Enter #HEX or enter URL param: url(http://domain.com/image.png). <span class='italic'>*Blank for transparent</span></div></div>
 						</div>
 						<div class="radio input">
 							<input type="radio" id="lbottom" name="lpos1" value="bottom" checked=true>
@@ -146,19 +148,21 @@
 							<div class="label"><div class="labelText">Select Horizontal Position</div></div>
 						</div>
 						<div class="radio input">
-							<input type="radio" id="lfadeani" name="lanimation" value="fade" checked=true>
+							<input type="radio" id="lslideani" name="lanimation" value="slide" checked=true>
+							<label for="lslideani">Slide</label>
+							<input type="radio" id="lfadeani" name="lanimation" value="fade">
 							<label for="lfadeani">Fade</label>
-							<input type="radio" id="lslideani" name="lanimation" value="slide">
-							<label for="lslideani">Slide</label>			
-							<div class="label"><div class="labelText">Select Animation</div></div>
+							<div class="label"><div class="labelText">Select Collapse Animation</div></div>
 						</div>
 						<div class="input" id="cPadding">
-							<input class="highlight smallInput" id="ltpad" type="text" name="ltpad" value="0" placeholder="0" maxlength="4" />
-							<input class="highlight smallInput" id="lbpad" type="text" name="lbpad" value="0" placeholder="0" maxlength="4" />
-							<input class="highlight smallInput" id="llpad" type="text" name="llpad" value="0" placeholder="0" maxlength="4" />
-							<input class="highlight smallInput" id="lrpad" type="text" name="lrpad" value="0" placeholder="0" maxlength="4" />
-							<div class="label"><div class="labelText">Top, Bottom, Left, Right Padding <span class='italic'>*in px</span></div></div>
-						</div>	
+							<input class="highlight smallInput" id="lvpad" type="text" name="lvpad" value="0" placeholder="0" maxlength="4" />
+							<input class="highlight smallInput" id="lhpad" type="text" name="lhpad" value="0" placeholder="0" maxlength="4" />
+							<div class="label"><div class="labelText">Vertical | Horizontal Offset <span class='italic'>*negative and positive values in px accepted</span></div></div>
+						</div>
+						<div class="input" id="launchTime">
+							<input class="highlight smallInput" id="cTime" type="text" name="cTime" placeholder="1000"/>
+							<div class="label"><div class="labelText">Enter time to collpase in milliseconds <span class='italic'>* 1000 = 1 second</span></div></div>
+						</div>						
 					
 					</div>
 
