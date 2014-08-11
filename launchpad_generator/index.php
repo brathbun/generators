@@ -62,7 +62,7 @@
 							<div class="label"><div class="labelText">Enter the URL to the collapsed state creative <span class='italic'>* Accepts .swf, .jpg, .png, .gif</span></div></div>
 						</div>
 						<div class="input" id="bgColorInput">
-							<input class="highlight smallInput" id="cbgColor" type="text" name="cbgColor" placeholder="#F1F1F1" maxlength="7" />
+							<input class="highlight smallInput" id="cbgColor" type="text" name="cbgColor" placeholder="#F1F1F1" />
 							<div class="label"><div class="labelText">Enter #HEX or enter URL param: url(http://domain.com/image.png). <span class='italic'>*Blank for transparent</span></div></div>
 						</div>
 						<div class="radio input">
@@ -134,7 +134,7 @@
 							<div class="label"><div class="labelText">Enter the URL to the launch state creative <span class='italic'>* Accepts .swf, .jpg, .png, .gif</span></div></div>
 						</div>
 						<div class="input" id="bgColorInput">
-							<input class="highlight smallInput" id="lbgColor" type="text" name="lbgColor" placeholder="#F1F1F1" maxlength="7" />
+							<input class="highlight smallInput" id="lbgColor" type="text" name="lbgColor" placeholder="#F1F1F1" />
 							<div class="label"><div class="labelText">Enter #HEX or enter URL param: url(http://domain.com/image.png). <span class='italic'>*Blank for transparent</span></div></div>
 						</div>
 						<div class="radio input">

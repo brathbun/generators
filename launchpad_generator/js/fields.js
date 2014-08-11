@@ -255,7 +255,7 @@ $(document).ready(function(){
 '	\'bg\' : \''+cbgColor+'\', \n' +
 '	\'position\': [\''+cpos1+'\', \''+cpos2+'\'], \n' +
 '	\'animation\': \''+canimation+'\', \n' +
-'	\'padding\': [\''+cvpad+'\', \''+chpad+'\'] \n' +
+'	\'padding\': [\''+cvpad+'\', \''+chpad+'\'], \n' +
 '	\'expandTime\': \''+lTime+'\' \n' +
 '} \n' +
 '\n' +
@@ -305,8 +305,19 @@ $(document).ready(function(){
 '	\'fullTrack\': \''+fullTrack+'\' \n' +
 '} \n' +
 '\n' +
+
+'var BMLP_track = { \n' +
+'	\'click\': \'##REDIRECT##\', \n' +
+'	\'server\': \'##SERVER##\', \n' +
+'	\'site\': \'##SITE##\', \n' +
+'	\'sitearea\': \'##SITEAREA##\', \n' +
+'	\'campaign_id\': \'##CAMPAIGN_ID##\', \n' +
+'	\'package_id\': \'##PACKAGE_ID##\', \n' +
+'	\'gif_id\': \'##GIF_ID##\' \n' +
+'} \n' +
+'\n' +
 'document.write(\'<img src="\' + BMLP_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +
-'document.write(\'<scr\'+\'ipt async src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.launchpad.refactor.js"></scr\'+\'ipt>\'); \n' +
+'document.write(\'<scr\'+\'ipt async src="http://static.test.labs.burstmedia.com/ads/js/burst.labs.launchpad.refactor.js"></scr\'+\'ipt>\'); \n' +
 '</script>';
 
 		$('#tagBox').focus().val(tag).select();
