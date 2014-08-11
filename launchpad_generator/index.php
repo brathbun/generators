@@ -24,6 +24,14 @@
 
 			<form action="" id="submit" method="POST">
 
+				<div class="radio input">
+					<input type="radio" id="prodenv" name="env" value="production" checked=true>
+					<label for="prodenv">Production</label>
+					<input type="radio" id="demoenv" name="env" value="demo">
+					<label for="demoenv">Demo</label>
+					<div class="label"><div class="labelText">Select Environment</div></div>
+				</div>				
+
 				<div class="inputNoLabel">
 					<div id="trackingButton"><input id="collapsedParms" type="button" value="Collapsed Creative Parameters" /></div>
 					<div class="label"><div class="labelText">Click to show Collapsed Creative Parameters.</div></div>
@@ -154,6 +162,25 @@
 							<label for="lfadeani">Fade</label>
 							<div class="label"><div class="labelText">Select Collapse Animation</div></div>
 						</div>
+						<div class="radio input">
+							<input type="radio" id="leftslide" name="slidefrom" value="left">
+							<label for="leftslide">Left</label>
+							<input type="radio" id="rightslide" name="slidefrom" value="right">
+							<label for="rightslide">Right</label>
+							<input type="radio" id="topslide" name="slidefrom" value="top">
+							<label for="topslide">Top</label>
+							<input type="radio" id="bottomslide" name="slidefrom" value="bottom" checked=true>
+							<label for="bottomslide">Bottom</label>
+							<input type="radio" id="tlslide" name="slidefrom" value="top left">
+							<label for="tlslide">Top Left</label>
+							<input type="radio" id="trslide" name="slidefrom" value="top right">
+							<label for="trslide">Top Right</label>
+							<input type="radio" id="blslide" name="slidefrom" value="bottom left">
+							<label for="blslide">Bottom Left</label>
+							<input type="radio" id="brslide" name="slidefrom" value="bottom right">
+							<label for="brslide">Bottom Right</label>
+							<div class="label"><div class="labelText">Select Slide From Animation <span class='italic'>*center/center position only</span></div></div>
+						</div>						
 						<div class="input" id="cPadding">
 							<input class="highlight smallInput" id="lvpad" type="text" name="lvpad" value="0" placeholder="0" maxlength="4" />
 							<input class="highlight smallInput" id="lhpad" type="text" name="lhpad" value="0" placeholder="0" maxlength="4" />

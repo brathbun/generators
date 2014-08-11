@@ -177,6 +177,7 @@ $(document).ready(function(){
 	//Generate Tag 
 	$('#generateTag').click(function(){
 
+		var env = $('input:radio[name="env"]:checked').val();
 		//Collpased Creative
 		var ctype = $('input:radio[name="cType"]:checked').val();
 		var cwidth = $('#cwidth').val();
@@ -199,6 +200,7 @@ $(document).ready(function(){
 		var lpos1 = $('input:radio[name="lpos1"]:checked').val();
 		var lpos2 = $('input:radio[name="lpos2"]:checked').val();
 		var lanimation = $('input:radio[name="lanimation"]:checked').val();
+		var slidefrom = $('input:radio[name="slidefrom"]:checked').val();
 		var lvpad = $('#lvpad').val();
 		var lhpad = $('#lhpad').val();
 		var cTime = $('#cTime').val();
@@ -241,7 +243,8 @@ $(document).ready(function(){
 '// Burst Media Launch Pad version 1.6.0 \n'  +
 '\n' +
 'var BMLP_setup = { \n' +
-'	\'impression\': \''+impression+'\' \n' +
+'	\'impression\': \''+impression+'\', \n' +
+'	\'environment\': \''+env+'\' \n' +
 '} \n' +
 '\n' +
 'var BMLP_collapse = { \n' +
@@ -264,6 +267,7 @@ $(document).ready(function(){
 '	\'bg\' : \''+lbgColor+'\', \n' +
 '	\'position\': [\''+lpos1+'\', \''+lpos2+'\'], \n' +
 '	\'animation\': \''+lanimation+'\', \n' +
+'	\'slidefrom\': \''+slidefrom+'\', \n' +
 '	\'padding\': [\''+lvpad+'\', \''+lhpad+'\'], \n' +
 '	\'collapseTime\': \''+cTime+'\' \n' +
 '} \n' +
@@ -302,7 +306,7 @@ $(document).ready(function(){
 '} \n' +
 '\n' +
 'document.write(\'<img src="\' + BMLP_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +
-'document.write(\'<scr\'+\'ipt async src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.launchpad.js"></scr\'+\'ipt>\'); \n' +
+'document.write(\'<scr\'+\'ipt async src="http://static-cdn.labs.burstnet.com/ads/js/burst.labs.launchpad.refactor.js"></scr\'+\'ipt>\'); \n' +
 '</script>';
 
 		$('#tagBox').focus().val(tag).select();
