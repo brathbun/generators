@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link href="favicon.ico" rel="shortcut icon" />
-	<title>Launchpad Generator v0.64</title>
+	<title>Launchpad Generator v0.79</title>
 	<meta name="description" content="Burst Media Launchpad Tag Generator">
 	<meta name="author" content="Ben Rathbun">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:700,500,300italic' rel='stylesheet' type='text/css'>
@@ -30,7 +30,15 @@
 					<input type="radio" id="demoenv" name="env" value="demo">
 					<label for="demoenv">Demo</label>
 					<div class="label"><div class="labelText">Select Environment</div></div>
-				</div>				
+				</div>
+
+				<div class="radio input">
+					<input type="radio" id="colstart" name="startstate" value="col" checked=true>
+					<label for="colstart">Collapsed</label>
+					<input type="radio" id="expstart" name="startstate" value="exp">
+					<label for="expstart">Expanded</label>
+					<div class="label"><div class="labelText">Select starting state</div></div>
+				</div>					
 
 				<div class="inputNoLabel">
 					<div id="trackingButton"><input id="collapsedParms" type="button" value="Collapsed Creative Parameters" /></div>

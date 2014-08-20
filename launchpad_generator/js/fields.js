@@ -178,6 +178,7 @@ $(document).ready(function(){
 	$('#generateTag').click(function(){
 
 		var env = $('input:radio[name="env"]:checked').val();
+		var startstate = $('input:radio[name="startstate"]:checked').val();
 		//Collpased Creative
 		var ctype = $('input:radio[name="cType"]:checked').val();
 		var cwidth = $('#cwidth').val();
@@ -240,11 +241,12 @@ $(document).ready(function(){
 		var clickTrackTen = $('#clickTrackTen').val();
 
 		var tag = '<script> \n'  +
-'// Burst Media Launch Pad version 1.6.0 \n'  +
+'// Burst Media Launch Pad version 1.8.0 \n'  +
 '\n' +
 'var BMLP_setup = { \n' +
 '	\'impression\': \''+impression+'\', \n' +
-'	\'environment\': \''+env+'\' \n' +
+'	\'environment\': \''+env+'\', \n' +
+'	\'state\': \''+startstate+'\' \n' +
 '} \n' +
 '\n' +
 'var BMLP_collapse = { \n' +
@@ -317,7 +319,7 @@ $(document).ready(function(){
 '} \n' +
 '\n' +
 'document.write(\'<img src="\' + BMLP_setup.impression + \'" border="0" width="1" height="1" target="_blank" style="position:absolute; top:0; left:-10px; z-index:-1;">\'); \n' +
-'document.write(\'<scr\'+\'ipt async src="http://static.test.labs.burstmedia.com/ads/js/burst.labs.launchpad.refactor.js"></scr\'+\'ipt>\'); \n' +
+'document.write(\'<scr\'+\'ipt async src="http://static.test.labs.burstmedia.com/ads/js/templates/burst.labs.launchpad.refactor.js"></scr\'+\'ipt>\'); \n' +
 '</script>';
 
 		$('#tagBox').focus().val(tag).select();
